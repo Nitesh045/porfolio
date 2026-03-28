@@ -15,12 +15,9 @@ export default function Skills() {
             padding: "6rem 3rem", maxWidth: "1100px", margin: "0 auto",
             background: "linear-gradient(180deg, transparent 0%, rgba(13,34,64,0.3) 50%, transparent 100%)"
         }}>
-            <ScrollReveal variant="up" duration="0.7s">
-                <p style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.72rem", color: "#63B3ED", letterSpacing: "0.25em", textTransform: "uppercase", marginBottom: "1rem" }}>03 / Skills</p>
-                <h2 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "clamp(1.8rem,3.5vw,2.5rem)", color: "#fff", marginBottom: "3.5rem" }}>My Tech Stack</h2>
-            </ScrollReveal>
+          
             <p style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.72rem", color: "#63B3ED", letterSpacing: "0.25em", textTransform: "uppercase", marginBottom: "1rem" }}>
-                03 / Skills
+               
             </p>
             <h2 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", color: "#fff", marginBottom: "3.5rem" }}>
                 My Tech Stack

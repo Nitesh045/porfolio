@@ -9,35 +9,49 @@ export default function About() {
   ];
 
   return (
-    <section id="about" style={{ padding: "8rem 3rem", maxWidth: "1100px", margin: "0 auto" }}>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "center" }}>
+    <section
+      id="about"
+      className="max-w-6xl mx-auto px-5 md:px-10 py-16 md:py-32 overflow-hidden"
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
 
+        {/* LEFT */}
         <ScrollReveal variant="left" duration="0.85s">
-          <p style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.72rem", color: "#63B3ED", letterSpacing: "0.25em", textTransform: "uppercase", marginBottom: "1rem" }}></p>
-          <h2 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "clamp(2rem,4vw,3rem)", color: "#fff", lineHeight: 1.15, marginBottom: "1.5rem" }}>
-            Building things<br /><span style={{ color: "#63B3ED" }}>that matter.</span>
+          <p className="font-mono text-[10px] text-blue-400 tracking-[0.25em] uppercase mb-4"></p>
+
+          <h2 className="font-bold text-3xl md:text-5xl text-white leading-tight mb-6">
+            Building things <br />
+            <span className="text-blue-400">that matter.</span>
           </h2>
-          <p style={{ fontFamily: "'DM Sans', sans-serif", color: "#718096", lineHeight: 1.9, fontSize: "1rem", marginBottom: "1rem" }}>
+
+          <p className="text-gray-400 leading-relaxed text-sm md:text-base mb-4">
             I'm a backend-focused full stack developer with a passion for architecting scalable systems, robust APIs, and real-world applications that actually solve problems.
           </p>
-          <p style={{ fontFamily: "'DM Sans', sans-serif", color: "#718096", lineHeight: 1.9, fontSize: "1rem" }}>
-            Currently working at Husk Power Systems, where I build subscription platforms, payment integrations, and inventory systems that power thousands of users across Africa and India.
+
+          <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+            Currently working at Husk Power Systems, where I build subscription platforms, payment integrations, and inventory systems.
           </p>
         </ScrollReveal>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }}>
+        {/* RIGHT - STATS */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
           {stats.map((s, i) => (
-            <ScrollReveal key={s.label} variant="up" delay={`${0.1 + i * 0.12}s`} duration="0.7s">
-              <div style={{
-                background: "rgba(255,255,255,0.03)", border: "1px solid rgba(99,179,237,0.1)",
-                borderRadius: "8px", padding: "2rem 1.5rem", textAlign: "center",
-                transition: "border-color 0.3s, background 0.3s"
-              }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(99,179,237,0.4)"; e.currentTarget.style.background = "rgba(99,179,237,0.06)"; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(99,179,237,0.1)"; e.currentTarget.style.background = "rgba(255,255,255,0.03)"; }}
-              >
-                <div style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "2.4rem", color: "#63B3ED", marginBottom: "0.4rem" }}>{s.value}</div>
-                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.68rem", color: "#718096", letterSpacing: "0.1em", textTransform: "uppercase" }}>{s.label}</div>
+            <ScrollReveal
+              key={s.label}
+              variant="up"
+              delay={`${0.1 + i * 0.12}s`}
+              duration="0.7s"
+            >
+              <div className="bg-white/5 border border-blue-400/10 rounded-xl p-6 text-center transition-all duration-300 hover:border-blue-400/40 hover:bg-blue-400/10">
+
+                <div className="text-3xl md:text-4xl font-extrabold text-blue-400 mb-1">
+                  {s.value}
+                </div>
+
+                <div className="font-mono text-[10px] text-gray-400 tracking-widest uppercase">
+                  {s.label}
+                </div>
+
               </div>
             </ScrollReveal>
           ))}
