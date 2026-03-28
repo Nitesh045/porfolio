@@ -25,7 +25,7 @@ export default function Experience() {
       {/* Heading */}
       <ScrollReveal variant="up" duration="0.7s">
         <p className="font-mono text-xs text-blue-400 tracking-[0.25em] uppercase mb-4">
-          02 / Experience
+         
         </p>
 
         <h2 className="text-white font-extrabold text-2xl md:text-4xl mb-12">
